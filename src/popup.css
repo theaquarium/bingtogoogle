@@ -1,0 +1,151 @@
+html, body {
+	margin: 0;
+}
+
+body {
+	font-family: 'Inter', sans-serif;
+	font-size: calc(12px + 1vmin);
+	background: #eee;
+}
+
+.Options {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	margin: auto;
+	color: #333;
+	padding: 1rem;
+}
+
+.Row {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: space-between;
+	width: 14rem;
+	margin: 0.5rem;
+	font-size: 1rem;
+	transition: 0.3s;
+}
+
+.RowTitle {
+	max-width: 65%;
+	text-align: right;
+}
+
+.RedirectAll {
+	width: 20rem;
+}
+
+/* https://codepen.io/melnik909/pen/oewwBo */
+.Switch {
+	--switchWidth: 3.5rem;
+	--switchBgUnchecked: #fafafa;
+	--switchBgChecked: #0394fc;
+	--switchFocusBorderChecked: #fff;
+	--switchFocusBorderUnchecked: #0079d1;
+	--switchFocusBorderThickness: 0.1rem;
+	--switchButtonBg: #fff;
+	
+	display: inline-block;
+	position: relative;
+	cursor: pointer;
+	-webkit-tap-highlight-color: transparent;
+	
+	width: var(--switchWidth);
+	height: calc((var(--switchWidth) / 2));
+	border-radius: var(--switchWidth);    
+	background-color: var(--switchBgChecked);
+	
+	transition: 0.3s;
+}
+
+.Row.is-inactive > .Switch {
+	--switchBgUnchecked: #dbdbdb;
+	--switchBgChecked: #b1bcc5;
+	--switchFocusBorderChecked: rgb(236, 236, 236);
+	--switchFocusBorderUnchecked: #959fa7;
+	--switchButtonBg: rgb(245, 245, 245);
+
+	cursor: default;
+}
+
+.Row.is-inactive {
+	color: #868686;
+}
+
+.SwitchBar {
+	display: block;
+	width: 100%;
+	height: 100%;
+}
+  
+.SwitchCheckbox {
+	width: 0;
+	height: 0;
+	opacity: 0;
+	
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+  
+.SwitchCheckbox:focus ~ .SwitchBar {
+	box-shadow: 0 0 0 var(--switchFocusBorderThickness) var(--switchFocusBorderUnchecked);
+}
+  
+.SwitchCheckbox:checked:focus ~ .SwitchBar {
+	box-shadow: 0 0 0 var(--switchFocusBorderThickness) var(--switchFocusBorderChecked);
+}
+  
+.SwitchBar:before, .SwitchBar:after {
+	content: "";
+  
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+  
+.SwitchBar:before {
+	width: 100%;
+	height: 100%;
+	box-sizing: border-box;
+	background-color: var(--switchBgUnchecked);
+}
+  
+.SwitchBar:after {
+	top: 50%;
+	z-index: 3;
+	transition: transform .4s cubic-bezier(0.44,-0.12, 0.07, 1.15);
+}
+  
+.Switch .SwitchBar {
+	border-radius: var(--switchWidth);    
+}
+  
+.Switch .SwitchBar:before {
+	border-radius: var(--switchWidth);
+	transition: opacity .2s ease-out .1s, transform .2s ease-out .1s;
+	transform: scale(1);
+	opacity: 1;
+}
+  
+.Switch .SwitchCheckbox:checked ~ .SwitchBar:before {
+	transform: scale(0);
+	opacity: .7;
+}
+  
+.Switch .SwitchBar:after {
+	width: calc(var(--switchWidth) / 2);
+	height: calc(var(--switchWidth) / 2);
+	transform: translate3d(0, -50%, 0);
+	
+	background-color: var(--switchButtonBg);
+	border-radius: 100%;
+	box-shadow: 0 2px 5px rgba(0, 0, 0, .3);  
+}
+  
+.Switch .SwitchCheckbox:checked ~ .SwitchBar:after {
+	transform: translate3d(100%, -50%, 0);
+}
