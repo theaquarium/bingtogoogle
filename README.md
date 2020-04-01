@@ -10,8 +10,8 @@ The extension's menu bar icon has a badge to show whether redirects are on.
 ~~The extension can be installed [here on the Chrome Web Store]().~~Coming Soon...
 
 ## Screenshots
-![Options Page](image/../images/splash/one.png)
-![Options Popup](image/../images/splash/four.png)
+![Options Page](image/../splash/one.png)
+![Options Popup](image/../splash/four.png)
 
 ## Feedback?
 Email me at [peter@vashevko.com](mailto:peter@vashevko.com?subject=BingToGoogle%20Feedback).
