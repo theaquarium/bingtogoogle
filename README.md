@@ -7,7 +7,7 @@ You can also click on the menu bar icon to open a popup with the extension's opt
 The extension's menu bar icon has a badge to show whether redirects are on.
 
 ## Installation
-~~The extension can be installed [here on the Chrome Web Store]().~~Coming Soon...
+The extension can be installed [here on the Chrome Web Store](https://chrome.google.com/webstore/detail/bingtogoogle/aioaooaikcpfineockocdhfabodoepgi).
 
 ## Screenshots
 ![Options Page](image/../splash/one.png)
