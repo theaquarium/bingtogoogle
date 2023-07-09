@@ -14,7 +14,7 @@ The extension can be installed [here on the Chrome Web Store](https://chrome.goo
 ![Options Popup](image/../splash/four.png)
 
 ## Feedback?
-Email me at [peter@vashevko.com](mailto:peter@vashevko.com?subject=BingToGoogle%20Feedback).
+Email me at [leah@vashevko.com](mailto:leah@vashevko.com?subject=BingToGoogle%20Feedback).
 
 ## License
 This project is licensed under the MIT license.
